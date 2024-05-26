@@ -28,7 +28,7 @@ export const GET = async (
       headers: {
         "Access-Control-Allow-Origin": `${process.env.ECOMMERCE_STORE_URL}`,
         "Access-Control-Allow-Methods": "GET",
-        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
       },
     });
   } catch (err) {
