@@ -29,7 +29,7 @@ const formSchema = z.object({
 });
 
 interface CollectionFormProps {
-  initialData?: CollectionType | null; //Must have "?" to make it optional
+  initialData?: CollectionType | null; 
 }
 
 const CollectionForm: React.FC<CollectionFormProps> = ({ initialData }) => {
@@ -64,6 +64,7 @@ const CollectionForm: React.FC<CollectionFormProps> = ({ initialData }) => {
         method: "POST",
         body: JSON.stringify(values),
       });
+      console.log(values);
       if (res.ok) {
         setLoading(false);
         toast.success(`Collection ${initialData ? "updated" : "created"}`);
